@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.flixsterreal.R;
 import com.example.flixsterreal.models.Movie;
 
@@ -80,7 +81,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             } else
                 imageURL = movie.getPosterPath();
 
-            Glide.with(context).load(imageURL).into(ivPoster);
+            Glide.with(context)
+                    .load(imageURL)
+                    .apply(new RequestOptions()
+
+                            .placeholder(R.mipmap.ic_launcher).dontTransform().dontAnimate())
+                    //.placeholder(R.drawable.placeholder)
+                    .into(ivPoster);
         }
     }
 }
