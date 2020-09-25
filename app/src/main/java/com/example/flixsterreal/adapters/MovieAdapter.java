@@ -84,9 +84,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             Glide.with(context)
                     .load(imageURL)
                     .apply(new RequestOptions()
-
                             .placeholder(R.mipmap.ic_launcher).dontTransform().dontAnimate())
-                    //.placeholder(R.drawable.placeholder)
                     .into(ivPoster);
         }
     }
