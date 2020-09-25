@@ -31,6 +31,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         this.movies = movies;
     }
 
+
     //inflating a layout from XML and returning the holder
     @NonNull
     @Override
@@ -83,8 +84,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
             Glide.with(context)
                     .load(imageURL)
-                    .apply(new RequestOptions()
-                            .placeholder(R.mipmap.ic_launcher).dontTransform().dontAnimate())
+                    .placeholder(R.drawable.ic_launcher_foreground).dontAnimate().dontTransform()
                     .into(ivPoster);
         }
     }
