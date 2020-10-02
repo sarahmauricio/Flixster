@@ -12,12 +12,12 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 #### BONUS
 
-- [ ] Trailers for popular movies are played automatically when the movie is selected (1 point).
-  - [ ] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
-  - [ ] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
+- [X] Trailers for popular movies are played automatically when the movie is selected (1 point).
+  - [X] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
+  - [X] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
 - [ ] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
 - [ ] Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
-- [ ] Add a rounded corners for the images using the Glide transformations. (1 point)
+- [X] Add a rounded corners for the images using the Glide transformations. (1 point)
 
 ### App Walkthough GIF
 
