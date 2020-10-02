@@ -15,17 +15,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.flixsterreal.DetailActivity;
+import com.example.flixsterreal.MainActivity;
 import com.example.flixsterreal.R;
 import com.example.flixsterreal.models.Movie;
 
 import org.parceler.Parcels;
 
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
@@ -88,9 +92,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             } else
                 imageURL = movie.getPosterPath();
 
+            int radius = 30; // corner radius, higher value = more rounded
+            int margin = 0;
+
             Glide.with(context)
                     .load(imageURL)
                     .placeholder(R.drawable.ic_launcher_foreground).dontAnimate().dontTransform()
+                    .transform(new RoundedCornersTransformation(radius, margin))
                     .into(ivPoster);
             //register click listener on whole container
             container.setOnClickListener(new View.OnClickListener() {
